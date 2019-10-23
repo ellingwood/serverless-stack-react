@@ -1,0 +1,17 @@
+export default {
+  STRIPE_KEY: "pk_test_123456789",
+  s3: {
+    REGION: "us-east-1",
+    BUCKET: "BUCKET_NAME"
+  },
+  apiGateway: {
+    REGION: "us-east-1",
+    URL: "API_GATEWAY_URL"
+  },
+  cognito: {
+    REGION: "us-east-1",
+    USER_POOL_ID: "us-east-1_123453253",
+    APP_CLIENT_ID: "bfuisfbuis4632874628",
+    IDENTITY_POOL_ID: "us-east-1:graegesget43t4"
+  }
+};

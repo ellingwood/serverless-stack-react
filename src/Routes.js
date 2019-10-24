@@ -11,11 +11,13 @@ import Signup from "./containers/Signup";
 import NewNote from "./containers/NewNote";
 import Settings from "./containers/Settings";
 import NotFound from "./containers/NotFound";
+import About from "./containers/About";
 
 export default function Routes({ appProps }) {
   return (
     <Switch>
       <AppliedRoute path="/" exact component={Home} appProps={appProps} />
+      <AppliedRoute path="/about" exact component={About} appProps={appProps} />
       <UnauthenticatedRoute path="/login" exact component={Login} appProps={appProps} />
       <UnauthenticatedRoute path="/signup" exact component={Signup} appProps={appProps} />
       <AuthenticatedRoute path="/settings" exact component={Settings} appProps={appProps} />

@@ -4,7 +4,8 @@ import {
   HelpBlock,
   FormGroup,
   FormControl,
-  ControlLabel
+  ControlLabel,
+  Jumbotron
 } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
 import { useFormFields } from "../libs/hooksLib";
@@ -69,6 +70,7 @@ export default function Signup(props) {
 
   function renderConfirmationForm() {
     return (
+      <div>
       <form onSubmit={handleConfirmationSubmit}>
         <FormGroup controlId="confirmationCode" bsSize="large">
           <ControlLabel>Confirmation Code</ControlLabel>
@@ -90,11 +92,17 @@ export default function Signup(props) {
           Verify
         </LoaderButton>
       </form>
+      </div>
     );
   }
 
   function renderForm() {
     return (
+      <div>
+        <Jumbotron fluid>
+          <h1>Sign Up</h1>
+          <p>Sign up to get started!</p>
+        </Jumbotron>
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email" bsSize="large">
           <ControlLabel>Email</ControlLabel>
@@ -131,6 +139,7 @@ export default function Signup(props) {
           Signup
         </LoaderButton>
       </form>
+      </div>
     );
   }
 

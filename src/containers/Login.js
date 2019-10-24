@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Auth } from "aws-amplify";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { FormGroup, FormControl, ControlLabel, Jumbotron } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
 import { useFormFields } from "../libs/hooksLib";
 import "./Login.css";
@@ -32,6 +32,10 @@ export default function Login(props) {
 
   return (
     <div className="Login">
+      <Jumbotron fluid>
+        <h1>Welcome Back!</h1>
+        <p>Login  to continue working</p>
+      </Jumbotron>
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email" bsSize="large">
           <ControlLabel>Email</ControlLabel>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { FormGroup, FormControl, ControlLabel, Jumbotron } from "react-bootstrap";
 import { CardElement, injectStripe } from "react-stripe-elements";
 import LoaderButton from "./LoaderButton";
 import { useFormFields } from "../libs/hooksLib";
@@ -36,6 +36,11 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
   }
 
   return (
+    <div className="BillingForm">
+      <Jumbotron fluid>
+        <h1>Purchase Storage</h1>
+        <p>Add additional note storage</p>
+      </Jumbotron>
     <form className="BillingForm" onSubmit={handleSubmitClick}>
       <FormGroup bsSize="large" controlId="storage">
         <ControlLabel>Storage</ControlLabel>
@@ -47,7 +52,6 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
           placeholder="Number of notes to store"
         />
       </FormGroup>
-      <hr />
       <FormGroup bsSize="large" controlId="name">
         <ControlLabel>Cardholder&apos;s name</ControlLabel>
         <FormControl
@@ -75,6 +79,7 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
         Purchase
       </LoaderButton>
     </form>
+    </div>
   );
 }
 

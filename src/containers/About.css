@@ -1,16 +1,12 @@
 @media all and (min-width: 480px) {
-  .Login {
-    padding: 60px 0;
+.About div {
     background-color: #ffffff;
-  }
-
-  .Login form {
-    margin: 0 auto;
-    max-width: 320px;
-  }
-
-  .Login div {
     text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.About .grid {
     background-color: #ffffff;
-  }
+}
 }
